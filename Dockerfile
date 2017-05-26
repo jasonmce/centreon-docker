@@ -36,7 +36,7 @@ ADD timezone.ini /etc/php.d/
 EXPOSE 80
 
 # Make them easier to snapshot and backup.
-VOLUME ["/usr/share/centreon/", "/usr/lib/nagios/plugins/"]
+VOLUME ["/usr/share/centreon/", "/usr/lib/nagios/plugins/", "/var/lib/mysql"]
 
 # Must use double quotes for json formatting.
 CMD ["/usr/bin/supervisord", "--configuration=/etc/supervisord.conf"]
